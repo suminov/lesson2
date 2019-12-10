@@ -6,13 +6,15 @@ ask_dict = {
 
 
 def ask_user():
-  while True:
-    ask = input('Задай мне вопрос: ')
-    if ask_dict.get(ask) != None:
+  try:
+    while True:
+      ask = input('Задай мне вопрос: ')
+    if ask in ask_dict != None:
       return ask_dict.get(ask)
-      break
     else:
       print('Задай другой ворос!')
+  except KeyboardInterrupt:
+    return 'Пока!'
       
 a = ask_user()
 print(a)

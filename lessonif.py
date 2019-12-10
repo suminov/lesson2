@@ -24,9 +24,9 @@ def line(variable1, variable2):
     return 0
   elif variable1 == variable2:
     return 1
-  elif variable1 != variable2 and len(variable1) > len(variable2):
+  elif len(variable1) > len(variable2):
     return 2
-  elif variable1 != variable2 and variable2 == 'learn':
+  elif variable2 == 'learn':
     return 3
   else:
     return 4
