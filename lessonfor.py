@@ -23,6 +23,6 @@ a = 0
 for result in rating:
   print('Средний балл {} класса: {}'
   .format(result['shool_class'], sum(result['scores'])/len(result['scores'])))
-  a += sum(result['scores'])/len(result['scores'])
+  sum_scores += sum(result['scores'])/len(result['scores'])
 
-print(a/len(rating))
+print(sum_scores/len(rating))

@@ -10,6 +10,6 @@ def discounted(price, discount, max_discount=20, name=''):
     else:
       return price - (price * discount / 100)
   except ValueError:
-    return 'price, discount, max_discount должны быть числом'
+    raise ValueError('price, discount, max_discount должны быть числом')
 
 print(discounted(10, '', True))
